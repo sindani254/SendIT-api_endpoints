@@ -12,41 +12,79 @@ There are two implemented models: User and Todo, one user has many todos.
 ## _Project structure_:
 ```
 .
-├── README.md
-├── manage.py
-├── app
-│   ├── __init__.py
-│   ├── todos
-│   │   ├── __init__.py
-│   │   ├── model.py
-│   │   └── resource.py
-│   └── users
-│       ├── __init__.py
-│       ├── model.py
-│       └── resource.py
-├── manage.py
-├── requirements.txt
-└── settings.py
+|-- README.md
+|-- __init__.py
+|-- __pycache__
+|   |-- app.cpython-37.pyc
+|   |-- config.cpython-37.pyc
+|   |-- models.cpython-37.pyc
+|   `-- tests.cpython-37.pyc
+|-- app
+|   |-- __init__.py
+|   |-- __pycache__
+|   |   `-- __init__.cpython-37.pyc
+|   |-- api
+|   |   |-- __init__.py
+|   |   |-- __pycache__
+|   |   |   `-- __init__.cpython-37.pyc
+|   |   `-- v1
+|   |       |-- __init__.py
+|   |       |-- __pycache__
+|   |       |   |-- __init__.cpython-37.pyc
+|   |       |   |-- models.cpython-37.pyc
+|   |       |   `-- views.cpython-37.pyc
+|   |       |-- models.py
+|   |       `-- views.py
+|   |-- requirements.txt
+|   `-- run.py
+|-- coverage
+|   |-- app_api_v1_views_py.html
+|   |-- coverage_html.js
+|   |-- index.html
+|   |-- jquery.ba-throttle-debounce.min.js
+|   |-- jquery.hotkeys.js
+|   |-- jquery.isonscreen.js
+|   |-- jquery.min.js
+|   |-- jquery.tablesorter.min.js
+|   |-- keybd_closed.png
+|   |-- keybd_open.png
+|   |-- status.json
+|   `-- style.css
+|-- instance
+|   |-- __init__.py
+|   |-- __pycache__
+|   |   |-- __init__.cpython-37.pyc
+|   |   `-- config.cpython-37.pyc
+|   `-- config.py
+|-- manage.py
+|-- requirements.txt
+|-- run.py
+`-- tests
+    |-- __init__.py
+    |-- __pycache__
+    |   |-- __init__.cpython-37.pyc
+    |   `-- test_views.cpython-37.pyc
+    `-- test_views.py
+
+12 directories, 41 files
 ```
 
-* endpoints - holds all endpoints.
-* app.py - flask application initialization.
-* settings.py - all global app settings.
+* app - holds all endpoints.
+* run.py - flask application initialization.
+* tests - holds all test codes.
+* coverage - holds coverage reports.
 * manage.py - script for managing application (migrations, server execution, etc.)
 
 ## Running 
 
 1. Clone repository.
 2. pip install requirements.txt
-3. Run following commands:
-    1. python manage.py db init
-    2. python manage.py db migrate
-    3. python manage.py db upgrade
-4. Start server by running python manage.py runserver
+3. Start server by running
+    `$ python manage.py runserver`
 
 ## Usage
 ### Users endpoint
-POST http://127.0.0.1:5000/api/users
+POST http://127.0.0.1:5000/api/v1/parcels
 
 REQUEST
 ```json
@@ -164,5 +202,3 @@ GET http://127.0.0.1:5000/api/users?limit=1&offset=1
     ]
 }
 ```
-
-Todo endpoint is similar to Users endpoint.
