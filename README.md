@@ -2,20 +2,19 @@
 # SendIT - Flask-RESTful API endpoints
 This project shows one of the possible ways to implement RESTful API server.
 
-There are implemented two models: User and Todo, one user has many todos.
+There are two implemented models: User and Todo, one user has many todos.
 
-Main libraries used:
+## _Main libraries used_:
 1. Flask-Migrate - for handling all database migrations.
 2. Flask-RESTful - restful API library.
 3. Flask-Script - provides support for writing external scripts.
-4. Flask-SQLAlchemy - adds support for SQLAlchemy ORM.
 
-Project structure:
+## _Project structure_:
 ```
 .
 ├── README.md
-├── app.py
-├── endpoints
+├── manage.py
+├── app
 │   ├── __init__.py
 │   ├── todos
 │   │   ├── __init__.py
