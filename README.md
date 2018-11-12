@@ -78,7 +78,9 @@ There are two implemented models: User and Todo, one user has many todos.
 ## Running 
 
 1. Clone repository.
+
 	`git clone https://github.com/sindani254/SendIT-api_endpoints.git`
+
 2. Install the dependencies
 	`pip install requirements.txt`
 3. Start server by running
