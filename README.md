@@ -38,19 +38,6 @@ There are two implemented models: User and Todo, one user has many todos.
 |   |       `-- views.py
 |   |-- requirements.txt
 |   `-- run.py
-|-- coverage
-|   |-- app_api_v1_views_py.html
-|   |-- coverage_html.js
-|   |-- index.html
-|   |-- jquery.ba-throttle-debounce.min.js
-|   |-- jquery.hotkeys.js
-|   |-- jquery.isonscreen.js
-|   |-- jquery.min.js
-|   |-- jquery.tablesorter.min.js
-|   |-- keybd_closed.png
-|   |-- keybd_open.png
-|   |-- status.json
-|   `-- style.css
 |-- instance
 |   |-- __init__.py
 |   |-- __pycache__
@@ -67,8 +54,8 @@ There are two implemented models: User and Todo, one user has many todos.
     |   `-- test_views.cpython-37.pyc
     `-- test_views.py
 
-12 directories, 41 files
 ```
+_(12 directories, 41 files)_
 
 * app - holds all endpoints.
 * run.py - flask application initialization.
