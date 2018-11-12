@@ -98,7 +98,7 @@ There are two implemented models: User and Todo, one user has many todos.
     
    _REQUEST_:
    
- 	`[GET] http://127.0.0.1:5000/api/v1`
+    `[GET] http://127.0.0.1:5000/api/v1`
    
    _RESPONSE_:
    ``` 
@@ -113,7 +113,7 @@ There are two implemented models: User and Todo, one user has many todos.
   
    _REQUEST_:
    
- 	`[GET] http://127.0.0.1:5000/api/v1/parcels
+    `[GET] http://127.0.0.1:5000/api/v1/parcels`
    
    _RESPONSE_:
    ```
@@ -240,21 +240,15 @@ There are two implemented models: User and Todo, one user has many todos.
 ------------------------------------------------
 
 
-  ### _Post a parcel delivery order endpoint_
+  ### _Cancel a parcel delivery order endpoint_
   
    _REQUEST_:
    
    ```
-   [POST] http://127.0.0.1:5000/api/v1/parcels
+   [PUT] http://127.0.0.1:5000/api/v1/parcels
    
    json
-       {
-	    "owner_id": 1,
-	    "item_name": "Geforce GTX 1050",
-	    "origin": "nairobi cbd",
-	    "pickup_location": "base",
-            "price": 85000
-       }
+   {"status": "cancelled"}
    ```
    
    _RESPONSE_:
@@ -262,15 +256,17 @@ There are two implemented models: User and Todo, one user has many todos.
    ```
    json
    {
-       "order details": {
-	  "id": 4,
-	  "item_name": "Geforce GTX 1050",
-	  "origin": "nairobi cbd",
-	  "owner_id": 1,
-	  "pickup_location": "base",
-	  "price": 85000,
-	  "status": null
-       }
+       "cancelled order": [
+           {
+               "id": 2,
+               "item_name": "Geforce GTX 1080 ti",
+               "origin": "nairobi cbd",
+               "owner_id": 2,
+               "pickup_location": "zimmerman base",
+               "price": 105000,
+               "status": "cancelled"
+           }
+       ]
    }
    ```
 ------------------------------------------------
