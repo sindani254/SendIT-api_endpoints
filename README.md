@@ -90,16 +90,17 @@ There are two implemented models: User and Todo, one user has many todos.
 	`$ python manage.py runserver`
 
 ## Usage
-### Get all parcel delivery orders endpoint
-## _[GET]_ http://127.0.0.1:5000/api/v1/parcels
+    ### Base URL 
+    
+	#### _REQUEST
+	
+	   _[GET]_ http://127.0.0.1:5000/api/v1
 
-REQUEST
-```json
-{
-	"name": "John John"
-}
-```
-RESPONSE
+### Get all parcel delivery orders endpoint
+_[GET]_ http://127.0.0.1:5000/api/v1/parcels
+
+
+_RESPONSE
 ```json
 {
     "id": 1,
