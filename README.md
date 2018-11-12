@@ -88,7 +88,7 @@ There are two implemented models: User and Todo, one user has many todos.
 
 2. Install the dependencies by running the command below:
 
-	`$ pip install requirements.txt`
+	`$ pip install -r requirements.txt`
 	
 3. Fire up server by running the command below:
 
