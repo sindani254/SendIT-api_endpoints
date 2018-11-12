@@ -90,11 +90,11 @@ There are two implemented models: User and Todo, one user has many todos.
 	`$ python manage.py runserver`
 
 ## Usage
-   ### Base URL 
+   ### _Base URL_
     
    _REQUEST_:
-	
-   - [GET] http://127.0.0.1:5000/api/v1
+   
+ 	`[GET] http://127.0.0.1:5000/api/v1`
    
    _RESPONSE_:
    ``` 
@@ -104,21 +104,47 @@ There are two implemented models: User and Todo, one user has many todos.
    }
    ```
 ------------------------------------------------
-  ### Get all parcel delivery orders endpoint
+  ### _Get all parcel delivery orders endpoint_
   
-  _REQUEST_:
-	
-   - [GET] http://127.0.0.1:5000/api/v1
+   _REQUEST_:
+   
+ 	`[GET] http://127.0.0.1:5000/api/v1/parcels
    
    _RESPONSE_:
    ``` 
-   json
    {
-	    "welcome": "crackers ni wale wase"
-   }
+    "all orders": [
+        {
+            "id": 1,
+            "item_name": "Geforce GTX 1060 iGame",
+            "origin": "nairobi cbd",
+            "owner_id": 1,
+            "pickup_location": "zimmerman base",
+            "price": 45000,
+            "status": "delivered"
+        },
+        {
+            "id": 2,
+            "item_name": "Geforce GTX 1080 ti",
+            "origin": "nairobi cbd",
+            "owner_id": 2,
+            "pickup_location": "zimmerman base",
+            "price": 105000,
+            "status": "in transit"
+        },
+        {
+            "id": 3,
+            "item_name": "Geforce GTX 1050 ti",
+            "origin": "nairobi cbd",
+            "owner_id": 1,
+            "pickup_location": "base",
+            "price": 85000,
+            "status": "cancelled"
+        }
+    ]
+}
    ```
 ------------------------------------------------
-  
   
   
 PUT http://127.0.0.1:5000/api/users/1
