@@ -247,7 +247,7 @@ There are two implemented models: User and Todo, one user has many todos.
 	   "owner_id": 1,
 	   "pickup_location": "base",
 	   "price": 85000,
-	   "status": null
+	   "status": "in transit"
        }
    }
    ```
