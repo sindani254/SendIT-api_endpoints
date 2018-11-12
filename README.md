@@ -77,7 +77,7 @@ There are two implemented models: User and Todo, one user has many todos.
 
 ## Running 
 
-1. Clone repository.
+1. Clone repository by running the command below:.
 
 	`$ git clone https://github.com/sindani254/SendIT-api_endpoints.git`
 	
@@ -85,11 +85,11 @@ There are two implemented models: User and Todo, one user has many todos.
 
 	`$ git checkout ch--integrate-test-coverage-reporting-161864049`
 
-2. Install the dependencies
+2. Install the dependencies by running the command below:
 
 	`$ pip install requirements.txt`
 	
-3. Fire up server by running
+3. Fire up server by running the command below:
 
 	`$ python manage.py runserver`
 
@@ -122,34 +122,34 @@ There are two implemented models: User and Todo, one user has many todos.
    json
    {
        "all orders": [
-        {
-            "id": 1,
-            "item_name": "Geforce GTX 1060 iGame",
-            "origin": "nairobi cbd",
-               "owner_id": 1,
-            "pickup_location": "zimmerman base",
-            "price": 45000,
-            "status": "delivered"
-        },
-        {
-            "id": 2,
-            "item_name": "Geforce GTX 1080 ti",
-            "origin": "nairobi cbd",
-            "owner_id": 2,
-            "pickup_location": "zimmerman base",
-            "price": 105000,
-            "status": "in transit"
-         },
-         {
-            "id": 3,
-            "item_name": "Geforce GTX 1050 ti",
-            "origin": "nairobi cbd",
-            "owner_id": 1,
-            "pickup_location": "base",
-            "price": 85000,
-            "status": "cancelled"
-         }
-     ]
+            {
+                "id": 1,
+                "item_name": "Geforce GTX 1060 iGame",
+                "origin": "nairobi cbd",
+                "owner_id": 1,
+                "pickup_location": "zimmerman base",
+                "price": 45000,
+                "status": "delivered"
+            },
+            {
+                "id": 2,
+                "item_name": "Geforce GTX 1080 ti",
+                "origin": "nairobi cbd",
+                "owner_id": 2,
+                "pickup_location": "zimmerman base",
+                "price": 105000,
+                "status": "in transit"
+            },
+            {
+                "id": 3,
+                "item_name": "Geforce GTX 1050 ti",
+                "origin": "nairobi cbd",
+                "owner_id": 1,
+                "pickup_location": "base",
+                "price": 85000,
+                "status": "cancelled"
+            }
+      ]
  }
 ```
    
@@ -167,16 +167,16 @@ There are two implemented models: User and Todo, one user has many todos.
    json
    {
     "order details": [
-        {
-            "id": 1,
-            "item_name": "Geforce GTX 1060 iGame",
-            "origin": "nairobi cbd",
-            "owner_id": 1,
-            "pickup_location": "zimmerman base",
-            "price": 45000,
-            "status": "delivered"
-        }
-    ]
+         {
+             "id": 1,
+             "item_name": "Geforce GTX 1060 iGame",
+             "origin": "nairobi cbd",
+             "owner_id": 1,
+             "pickup_location": "zimmerman base",
+             "price": 45000,
+             "status": "delivered"
+         }
+     ]
 }
    ```
 ------------------------------------------------
@@ -192,20 +192,21 @@ There are two implemented models: User and Todo, one user has many todos.
    ```
    json
    {
-    "order details": [
-            {
-                "id": 1,
-                "item_name": "Geforce GTX 1060 iGame",
-                "origin": "nairobi cbd",
-                "owner_id": 1,
-                "pickup_location": "zimmerman base",
-                "price": 45000,
-                "status": "delivered"
-            }
-        ]
+       "order details": [
+           {
+               "id": 1,
+               "item_name": "Geforce GTX 1060 iGame",
+               "origin": "nairobi cbd",
+               "owner_id": 1,
+               "pickup_location": "zimmerman base",
+               "price": 45000,
+               "status": "delivered"
+           }
+       ]
    }
    ```
 ------------------------------------------------
+
 
   ### _Post a parcel delivery order endpoint_
   
@@ -215,13 +216,13 @@ There are two implemented models: User and Todo, one user has many todos.
    [POST] http://127.0.0.1:5000/api/v1/parcels
    
    json
-       {
-	    "owner_id": 1,
-	    "item_name": "Geforce GTX 1050",
-	    "origin": "nairobi cbd",
-	    "pickup_location": "base",
-            "price": 85000
-       }
+   {
+       "owner_id": 1,
+       "item_name": "Geforce GTX 1050",
+       "origin": "nairobi cbd",
+       "pickup_location": "base",
+       "price": 85000
+   }
    ```
    
    _RESPONSE_:
@@ -230,13 +231,13 @@ There are two implemented models: User and Todo, one user has many todos.
    json
    {
        "order details": {
-	  "id": 4,
-	  "item_name": "Geforce GTX 1050",
-	  "origin": "nairobi cbd",
-	  "owner_id": 1,
-	  "pickup_location": "base",
-	  "price": 85000,
-	  "status": null
+           "id": 4,
+	   "item_name": "Geforce GTX 1050",
+	   "origin": "nairobi cbd",
+	   "owner_id": 1,
+	   "pickup_location": "base",
+	   "price": 85000,
+	   "status": null
        }
    }
    ```
@@ -248,7 +249,7 @@ There are two implemented models: User and Todo, one user has many todos.
    _REQUEST_:
    
    ```
-   [PUT] http://127.0.0.1:5000/api/v1/parcels
+   [PUT] localhost:5000/api/v1/parcels/2/cancel
    
    json
    {"status": "cancelled"}
