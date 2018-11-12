@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/sindani254/SendIT-endpoints.svg?branch=master)](https://travis-ci.org/sindani254/SendIT-endpoints)
+[![Build Status](https://travis-ci.org/sindani254/SendIT-endpoints.svg?branch=master)](https://travis-ci.org/sindani254/SendIT-endpoints)  [![GitHub contributors](https://img.shields.io/github/contributors/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/contributors/)   [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
 # SendIT - Flask-RESTful API endpoints
 This project shows one of the possible ways to implement RESTful API server.
 
@@ -122,35 +123,35 @@ There are two implemented models: User and Todo, one user has many todos.
    json
    {
        "all orders": [
-            {
-                "id": 1,
-                "item_name": "Geforce GTX 1060 iGame",
-                "origin": "nairobi cbd",
-                "owner_id": 1,
-                "pickup_location": "zimmerman base",
-                "price": 45000,
-                "status": "delivered"
-            },
-            {
-                "id": 2,
-                "item_name": "Geforce GTX 1080 ti",
-                "origin": "nairobi cbd",
-                "owner_id": 2,
-                "pickup_location": "zimmerman base",
-                "price": 105000,
-                "status": "in transit"
-            },
-            {
-                "id": 3,
-                "item_name": "Geforce GTX 1050 ti",
-                "origin": "nairobi cbd",
-                "owner_id": 1,
-                "pickup_location": "base",
-                "price": 85000,
-                "status": "cancelled"
-            }
-      ]
- }
+           {
+               "id": 1,
+               "item_name": "Geforce GTX 1060 iGame",
+               "origin": "nairobi cbd",
+               "owner_id": 1,
+               "pickup_location": "zimmerman base",
+               "price": 45000,
+               "status": "delivered"
+           },
+           {
+               "id": 2,
+               "item_name": "Geforce GTX 1080 ti",
+               "origin": "nairobi cbd",
+               "owner_id": 2,
+               "pickup_location": "zimmerman base",
+               "price": 105000,
+               "status": "in transit"
+           },
+           {
+               "id": 3,
+               "item_name": "Geforce GTX 1050 ti",
+               "origin": "nairobi cbd",
+               "owner_id": 1,
+               "pickup_location": "base",
+               "price": 85000,
+               "status": "cancelled"
+           }
+       ]
+   }
 ```
    
 ------------------------------------------------
@@ -166,18 +167,18 @@ There are two implemented models: User and Todo, one user has many todos.
    ```
    json
    {
-    "order details": [
-         {
-             "id": 1,
-             "item_name": "Geforce GTX 1060 iGame",
-             "origin": "nairobi cbd",
-             "owner_id": 1,
-             "pickup_location": "zimmerman base",
-             "price": 45000,
-             "status": "delivered"
-         }
-     ]
-}
+       "order details": [
+           {
+               "id": 1,
+               "item_name": "Geforce GTX 1060 iGame",
+               "origin": "nairobi cbd",
+               "owner_id": 1,
+               "pickup_location": "zimmerman base",
+               "price": 45000,
+               "status": "delivered"
+           }
+       ]
+   }
    ```
 ------------------------------------------------
 
@@ -274,5 +275,5 @@ There are two implemented models: User and Todo, one user has many todos.
    }
    ```
 ------------------------------------------------
-
+_END..  [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 
