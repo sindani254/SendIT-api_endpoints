@@ -119,37 +119,38 @@ There are two implemented models: User and Todo, one user has many todos.
    ```
    json
    {
-    "all orders": [
-        {
-            "id": 1,
-            "item_name": "Geforce GTX 1060 iGame",
-            "origin": "nairobi cbd",
-            "owner_id": 1,
-            "pickup_location": "zimmerman base",
-            "price": 45000,
-            "status": "delivered"
-        },
-        {
-            "id": 2,
-            "item_name": "Geforce GTX 1080 ti",
-            "origin": "nairobi cbd",
-            "owner_id": 2,
-            "pickup_location": "zimmerman base",
-            "price": 105000,
-            "status": "in transit"
-        },
-        {
-            "id": 3,
-            "item_name": "Geforce GTX 1050 ti",
-            "origin": "nairobi cbd",
-            "owner_id": 1,
-            "pickup_location": "base",
-            "price": 85000,
-            "status": "cancelled"
-        }
-    ]
-}
+       "all orders": [
+           {
+               "id": 1,
+               "item_name": "Geforce GTX 1060 iGame",
+               "origin": "nairobi cbd",
+               "owner_id": 1,
+               "pickup_location": "zimmerman base",
+               "price": 45000,
+               "status": "delivered"
+           },
+           {
+               "id": 2,
+               "item_name": "Geforce GTX 1080 ti",
+               "origin": "nairobi cbd",
+               "owner_id": 2,
+               "pickup_location": "zimmerman base",
+               "price": 105000,
+               "status": "in transit"
+           },
+           {
+               "id": 3,
+               "item_name": "Geforce GTX 1050 ti",
+               "origin": "nairobi cbd",
+               "owner_id": 1,
+               "pickup_location": "base",
+               "price": 85000,
+               "status": "cancelled"
+           }
+       ]
+   }
    ```
+   
 ------------------------------------------------
 
   ### _Get a particular parcel delivery order endpoint_
@@ -176,6 +177,7 @@ There are two implemented models: User and Todo, one user has many todos.
 }
    ```
 ------------------------------------------------
+
 
   ### _Get a particular user's parcel delivery orders endpoint_
   
@@ -217,13 +219,14 @@ There are two implemented models: User and Todo, one user has many todos.
 	    "pickup_location": "base",
             "price": 85000
        }
+   ```
    
    _RESPONSE_:
    
    ```
    json
    {
-       "parcel": {
+       "order details": {
 	  "id": 4,
 	  "item_name": "Geforce GTX 1050",
 	  "origin": "nairobi cbd",
@@ -235,3 +238,41 @@ There are two implemented models: User and Todo, one user has many todos.
    }
    ```
 ------------------------------------------------
+
+
+  ### _Post a parcel delivery order endpoint_
+  
+   _REQUEST_:
+   
+   ```
+   [POST] http://127.0.0.1:5000/api/v1/parcels
+   
+   json
+       {
+	    "owner_id": 1,
+	    "item_name": "Geforce GTX 1050",
+	    "origin": "nairobi cbd",
+	    "pickup_location": "base",
+            "price": 85000
+       }
+   ```
+   
+   _RESPONSE_:
+   
+   ```
+   json
+   {
+       "order details": {
+	  "id": 4,
+	  "item_name": "Geforce GTX 1050",
+	  "origin": "nairobi cbd",
+	  "owner_id": 1,
+	  "pickup_location": "base",
+	  "price": 85000,
+	  "status": null
+       }
+   }
+   ```
+------------------------------------------------
+
+
