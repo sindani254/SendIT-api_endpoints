@@ -78,9 +78,11 @@ There are two implemented models: User and Todo, one user has many todos.
 ## Running 
 
 1. Clone repository.
-2. pip install requirements.txt
+	`git clone https://github.com/sindani254/SendIT-api_endpoints.git`
+2. Install the dependencies
+	`pip install requirements.txt`
 3. Start server by running
-    `$ python manage.py runserver`
+	`$ python manage.py runserver`
 
 ## Usage
 ### Users endpoint
@@ -202,3 +204,4 @@ GET http://127.0.0.1:5000/api/users?limit=1&offset=1
     ]
 }
 ```
+
