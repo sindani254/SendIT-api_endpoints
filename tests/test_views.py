@@ -28,7 +28,7 @@ class TestConfig(unittest.TestCase):
     def test_index(self):
         response = self.app.get('/api/v1', content_type="application/json")
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b'crackers ni wale wase', response.data)
+        self.assertIn(b'the-anonymous ni wale wase', response.data)
 
     def test_get_all_parcel_orders(self):
         response = self.app.get(BASE_URL, content_type='application/json')

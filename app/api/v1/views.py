@@ -29,7 +29,7 @@ def bad_request(error):
 
 @v1_blueprint.route('/api/v1')
 def index():
-    return jsonify({"welcome": "crackers ni wale wase"})
+    return jsonify({"welcome": "the-anonymous ni wale wase"})
 
 
 @v1_blueprint.route('/api/v1/parcels', methods=['POST'])
@@ -48,7 +48,7 @@ def post_delivery_order():
     origin = request.json.get('origin')
     pickup_location = request.json.get('pickup_location')
     price = request.json.get('price')
-    status = request.json.get('status')
+    status = "in transit"
 
     if _entry_exists_for_delivery_order(item_name):
         return jsonify({'message': "entry exists"})
@@ -62,7 +62,7 @@ def post_delivery_order():
         "status": status
     }
     parcels.append(parcel)
-    return jsonify({'parcel': parcel}), 201
+    return jsonify({'order details': parcel}), 201
 
 
 @v1_blueprint.route('/api/v1/parcels', methods=['GET'])
@@ -79,7 +79,7 @@ def get_particular_parcel_order(id):
     order = _get_order(id)
     if not order:
         abort(404)
-    return jsonify({'order': order})
+    return jsonify({'order details': order})
 
 
 # get parcel orders belonging to a particular user
@@ -88,7 +88,7 @@ def get_user_parcel_delivery_orders(id):
     parcel = [parcel for parcel in parcels if parcel['owner_id'] == id]
     if not parcel:
         abort(404)
-    return jsonify({"parcels": parcel})
+    return jsonify({"your orders": parcel})
 
 
 @v1_blueprint.route('/api/v1/parcels/<int:id>/cancel', methods=['PUT'])
@@ -103,4 +103,4 @@ def cancel_delivery_order(id):
     elif orders[0]['status'] == "cancelled":
         return jsonify({"error": "order has already been cancelled!!"})
     orders[0]['status'] = "cancelled"
-    return jsonify({'delivery order': orders})
+    return jsonify({'cancelled order': orders})
