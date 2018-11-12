@@ -79,13 +79,17 @@ There are two implemented models: User and Todo, one user has many todos.
 
 1. Clone repository.
 
-	`git clone https://github.com/sindani254/SendIT-api_endpoints.git`
+	`$ git clone https://github.com/sindani254/SendIT-api_endpoints.git`
+	
+2. Checkout the _ch--integrate-test-coverage-reporting-161864049_
+
+	`$ git checkout ch--integrate-test-coverage-reporting-161864049`
 
 2. Install the dependencies
 
-	`pip install requirements.txt`
+	`$ pip install requirements.txt`
 	
-3. Start server by running
+3. Fire up server by running
 
 	`$ python manage.py runserver`
 
