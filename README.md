@@ -193,7 +193,7 @@ There are two implemented models: User and Todo, one user has many todos.
    ```
    json
    {
-       "order details": [
+       "your orders": [
            {
                "id": 1,
                "item_name": "Geforce GTX 1060 iGame",
@@ -202,6 +202,15 @@ There are two implemented models: User and Todo, one user has many todos.
                "pickup_location": "zimmerman base",
                "price": 45000,
                "status": "delivered"
+           },
+	   {
+               "id": 3,
+               "item_name": "Geforce GTX 1050 ti",
+               "origin": "nairobi cbd",
+               "owner_id": 1,
+               "pickup_location": "base",
+               "price": 85000,
+               "status": "cancelled"
            }
        ]
    }
