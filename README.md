@@ -100,10 +100,11 @@ There are two implemented models: User and Todo, one user has many todos.
    ``` 
    json
    {
-	    "welcome": "crackers ni wale wase"
+       "welcome": "the-anonymous ni wale wase"
    }
    ```
 ------------------------------------------------
+
   ### _Get all parcel delivery orders endpoint_
   
    _REQUEST_:
@@ -111,7 +112,8 @@ There are two implemented models: User and Todo, one user has many todos.
  	`[GET] http://127.0.0.1:5000/api/v1/parcels
    
    _RESPONSE_:
-   ``` 
+   ```
+   json
    {
     "all orders": [
         {
@@ -145,108 +147,28 @@ There are two implemented models: User and Todo, one user has many todos.
 }
    ```
 ------------------------------------------------
+
+  ### _Get a particular parcel delivery order endpoint_
   
-  
-PUT http://127.0.0.1:5000/api/users/1
-
-REQUEST
-```json
-{
-	"name": "Smith Smith"
-}
-```
-RESPONSE
-```json
-{
-    "id": 1,
-    "name": "Smith Smith",
-    "todos": []
-}
-```
-DELETE http://127.0.0.1:5000/api/users/1
-
-RESPONSE
-```json
-{
-    "id": 3,
-    "name": "Tom Tom",
-    "todos": []
-}
-```
-GET http://127.0.0.1:5000/api/users
-
-RESPONSE
-```json
-{
-    "count": 2,
-    "users": [
+   _REQUEST_:
+   
+ 	`[GET] http://127.0.0.1:5000/api/v1/parcels/1
+   
+   _RESPONSE_:
+   ```
+   json
+   {
+    "order details": [
         {
             "id": 1,
-            "name": "John John",
-            "todos": [
-                {
-                    "id": 1,
-                    "name": "First task",
-                    "description": "First task description"
-                },
-                {
-                    "id": 2,
-                    "name": "Second task",
-                    "description": "Second task description"
-                }
-            ]
-        },
-        {
-            "id": 2,
-            "name": "Smith Smith",
-            "todos": []
+            "item_name": "Geforce GTX 1060 iGame",
+            "origin": "nairobi cbd",
+            "owner_id": 1,
+            "pickup_location": "zimmerman base",
+            "price": 45000,
+            "status": "delivered"
         }
     ]
 }
-```
-GET http://127.0.0.1:5000/api/users/2
-```json
-{
-    "id": 2,
-    "name": "Smith Smith",
-    "todos": []
-}
-```
-GET http://127.0.0.1:5000/api/users?name=John John
-```json
-{
-    "count": 1,
-    "users": [
-        {
-            "id": 1,
-            "name": "John John",
-            "todos": [
-                {
-                    "id": 1,
-                    "name": "First task",
-                    "description": "First task description"
-                },
-                {
-                    "id": 2,
-                    "name": "Second task",
-                    "description": "Second task description"
-                }
-            ]
-        }
-    ]
-}
-```
-GET http://127.0.0.1:5000/api/users?limit=1&offset=1
-```json
-{
-    "count": 1,
-    "users": [
-        {
-            "id": 2,
-            "name": "Smith Smith",
-            "todos": []
-        }
-    ]
-}
-```
-
+   ```
+------------------------------------------------
