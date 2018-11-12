@@ -152,7 +152,7 @@ There are two implemented models: User and Todo, one user has many todos.
   
    _REQUEST_:
    
- 	`[GET] http://127.0.0.1:5000/api/v1/parcels/1`
+   `[GET] http://127.0.0.1:5000/api/v1/parcels/1`
    
    _RESPONSE_:
    ```
@@ -177,24 +177,24 @@ There are two implemented models: User and Todo, one user has many todos.
   
    _REQUEST_:
    
- 	`[GET] localhost:5000/api/v1/users/1/parcels`
+   `[GET] localhost:5000/api/v1/users/1/parcels`
    
    _RESPONSE_:
    ```
    json
    {
     "order details": [
-        {
-            "id": 1,
-            "item_name": "Geforce GTX 1060 iGame",
-            "origin": "nairobi cbd",
-            "owner_id": 1,
-            "pickup_location": "zimmerman base",
-            "price": 45000,
-            "status": "delivered"
-        }
-    ]
-}
+            {
+                "id": 1,
+                "item_name": "Geforce GTX 1060 iGame",
+                "origin": "nairobi cbd",
+                "owner_id": 1,
+                "pickup_location": "zimmerman base",
+                "price": 45000,
+                "status": "delivered"
+            }
+        ]
+   }
    ```
 ------------------------------------------------
 
@@ -202,23 +202,32 @@ There are two implemented models: User and Todo, one user has many todos.
   
    _REQUEST_:
    
- 	`[POST] localhost:5000/api/v1/users/1/parcels`
+   ```
+   [POST] http://127.0.0.1:5000/api/v1/parcels
+   
+   json
+       {
+	    "owner_id": 1,
+	    "item_name": "Geforce GTX 1050",
+	    "origin": "nairobi cbd",
+	    "pickup_location": "base",
+            "price": 85000
+       }
    
    _RESPONSE_:
+   
    ```
    json
-	{
-	    "order details": [
-		{
-		    "id": 1,
-		    "item_name": "Geforce GTX 1060 iGame",
-		    "origin": "nairobi cbd",
-		    "owner_id": 1,
-		    "pickup_location": "zimmerman base",
-		    "price": 45000,
-		    "status": "delivered"
-		}
-	    ]
-	}
+   {
+       "parcel": {
+	  "id": 4,
+	  "item_name": "Geforce GTX 1050",
+	  "origin": "nairobi cbd",
+	  "owner_id": 1,
+	  "pickup_location": "base",
+	  "price": 85000,
+	  "status": null
+       }
+   }
    ```
 ------------------------------------------------
