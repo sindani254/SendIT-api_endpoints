@@ -76,7 +76,7 @@ There are two implemented models: User and Todo, one user has many todos.
 * coverage - holds coverage reports.
 * manage.py - script for managing application (migrations, server execution, etc.)
 
-## Running 
+## Running the app
 
 1. Clone repository by running the command below:.
 
@@ -284,5 +284,20 @@ There are two implemented models: User and Todo, one user has many todos.
    }
    ```
 ------------------------------------------------
+
+
+## _Running the Tests_
+    
+1. _To run the tests, use the command_:
+   
+   `$ python manage.py test`
+
+1. _To run the coverage, use the command_:
+   
+   `$ python manage.py cov`
+
+--------------- _END ----------------------
+   
+ 
 _END..  [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 
