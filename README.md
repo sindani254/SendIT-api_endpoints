@@ -90,24 +90,37 @@ There are two implemented models: User and Todo, one user has many todos.
 	`$ python manage.py runserver`
 
 ## Usage
-    ### Base URL 
+   ### Base URL 
     
-	#### _REQUEST
+   _REQUEST_:
 	
-	   _[GET]_ http://127.0.0.1:5000/api/v1
-
-### Get all parcel delivery orders endpoint
-_[GET]_ http://127.0.0.1:5000/api/v1/parcels
-
-
-_RESPONSE
-```json
-{
-    "id": 1,
-    "name": "John John",
-    "todos": []
-}
-```
+   - [GET] http://127.0.0.1:5000/api/v1
+   
+   _RESPONSE_:
+   ``` 
+   json
+   {
+	    "welcome": "crackers ni wale wase"
+   }
+   ```
+------------------------------------------------
+  ### Get all parcel delivery orders endpoint
+  
+  _REQUEST_:
+	
+   - [GET] http://127.0.0.1:5000/api/v1
+   
+   _RESPONSE_:
+   ``` 
+   json
+   {
+	    "welcome": "crackers ni wale wase"
+   }
+   ```
+------------------------------------------------
+  
+  
+  
 PUT http://127.0.0.1:5000/api/users/1
 
 REQUEST
