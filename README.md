@@ -65,11 +65,11 @@ _(12 directories, 41 files)_
 
 ## Running the app
 
-1. Clone repository by running the command below:.
+1. Clone repository by running the command below:
 
 	`$ git clone https://github.com/sindani254/SendIT-api_endpoints.git`
 	
-2. Checkout the _ch--integrate-test-coverage-reporting-161864049_
+2. Checkout the _ch--integrate-test-coverage-reporting-161864049_ branch by running the command below:
 
 	`$ git checkout ch--integrate-test-coverage-reporting-161864049`
 
