@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/sindani254/SendIT-endpoints.svg?branch=master)](https://travis-ci.org/sindani254/SendIT-endpoints)  [![GitHub contributors](https://img.shields.io/github/contributors/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/contributors/)   [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![Coverage Status](https://coveralls.io/repos/github/sindani254/SendIT-api_endpoints/badge.svg?branch=merge)](https://coveralls.io/github/sindani254/SendIT-api_endpoints?branch=merge)
 
+[![Test Coverage](https://api.codeclimate.com/v1/badges/6847c32f80bc4ef30bb3/test_coverage)](https://codeclimate.com/github/sindani254/SendIT-api_endpoints/test_coverage)
+
 # SendIT - Flask-RESTful API endpoints
 This project shows one of the possible ways to implement RESTful API server.
 
